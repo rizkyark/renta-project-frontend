@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import styles from "../../styles/reservation.module.css";
 import { useState } from "react";
 import Image from "next/image";
+import Header from "../../components/Header/Header.jsx";
+import Footer from "../../components/Footer";
 // import ButtonCount from "../../../components/base/ButtonCount";
 // import InputOpt from "../../../components/base/InputOpt";
 // import ButtonPay from "../../../components/base/ButtonPay";
@@ -109,6 +111,7 @@ const Reservation = (props) => {
 
   return (
     <Fragment>
+      <Header />
       <div className="">
         <div className="container">
           <div className="d-flex align-items-center mt-3 mb-lg-5 mb-md-4 mb-4">
@@ -137,9 +140,7 @@ const Reservation = (props) => {
               <span className={`d-block ${styles.itemLoc}`}>
                 {vehicle.location}
               </span>
-              <span className={`d-block ${styles.itemPay}`}>
-                No Prepayment
-              </span>
+              <span className={`d-block ${styles.itemPay}`}>No Prepayment</span>
               <span className={`d-block ${styles.itemavaiable}`}>
                 Available vehicle : {vehicle.stock}
               </span>
@@ -214,12 +215,13 @@ const Reservation = (props) => {
           </div>
           <button
             onClick={handlePay}
-            className={`${styles.btn} bg-orange w-100 mt-5`}
+            className={`${styles.btn} bg-orange w-100 mt-5 mb-5`}
           >
             Pay now : Rp. {rental.totalPayment}
           </button>
         </div>
       </div>
+      <Footer />
     </Fragment>
   );
 };

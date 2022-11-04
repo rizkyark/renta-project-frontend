@@ -1,3 +1,7 @@
+.mainContainer{
+    margin-left: 130px;
+}
+
 .itemTitle {
     font-size: 30px;
     font-family: 'Custom-font', playfair;
@@ -71,6 +75,14 @@
 }
 
 .box{
+    border-radius: 5px;
+    outline: 1px solid var(--custom-grey);
+    padding: 20px 10px 20px 30px;
+    margin-bottom: 10px;
+    font-family: 'Custom-font', nunito;
+}
+
+.boxIden{
     border-radius: 5px;
     outline: 1px solid var(--custom-grey);
     padding: 20px 10px 20px 30px;
